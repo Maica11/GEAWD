@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+ </head>
+          <link rel="stylesheet" href="style.css">
+
+
+<body>
+    <div class="container">
+        <img src="logo.jpeg.jpg" alt ="Inventory Materials" id="logo">
+    <center><h1>OTHER MATERIALS AND SUPPLIES INVENTORY</h1></center>
+    <center><h1>(1-04-04-990)</h1></center>
+        <!-- Response Message for Inventory Management -->
+        <div id="inventoryResponse" class="response-message"></div>
+
+        <!-- Inventory Management Form -->
+        <form id="inventoryForm">
+            <input type="text" id="material" placeholder="Material" required>
+            <input type="text" id="stockNumber" placeholder="Stock Number" required>
+            <input type="text" id="unitOfMeasure" placeholder="Unit of Measure" required>
+            <input type="number" id="onhandPerCount" placeholder="Onhand Per Count" required>
+            <select id="inOut" required>
+                <option value="" disabled selected>Borrow</option>
+                <option value="in">In</option>
+                <option value="out">Out</option>
+            </select>
+            <input type="number" id="purchased" placeholder="Purchased" required>
+            <input type="number" id="delivery" placeholder="Delivery" required>
+            <input type="number" id="problems" placeholder="Problems" required>
+            <input type="number" id="repair" placeholder="Repair" required>
+            <input type="number" id="total" placeholder="Total" readonly>
+            <button type="submit">Add Item</button>
+        </form>
+
+        <div class="button-group">
+            <button id="printInventoryButton">Print Inventory</button>
+        </div>
+
+        <!-- Inventory Table -->
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Stock Number</th>
+                    <th>Unit of Measure</th>
+                    <th>Onhand Per Count</th>
+                    <th>In/Out</th>
+                    <th>Purchased</th>
+                    <th>Delivery</th>
+                    <th>Problems</th>
+                    <th>Repair</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory items will be added here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- RIS Daily Report Section -->
+        <section id="risReport">
+            <center><h2>DAILY RIS # REPORT</h2></center>
+
+            <!-- Response Message for RIS Daily Report -->
+            <div id="reportResponse" class="response-message"></div>
+
+            <!-- RIS Daily Report Form -->
+            <form id="reportForm">
+                <input type="date" id="reportDate" required="">
+                <textarea id="reportMaterials" placeholder="Materails" required></textarea>
+                <textarea id="reportSuppliesNumber" placeholder="Supplies Number" required></textarea>
+                <textarea id="reportDescription" placeholder="Description" required></textarea>
+                <input type="number" id="totalItems" placeholder="Total Items" required>
+                <button type="submit">Add Report</button>
+            </form>
+
+            <div class="button-group">
+                <button id="printReportButton">Print Report</button>
+            </div>
+
+            <!-- RIS Report Table -->
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Materials</th>
+                        <th>Supplies Number</th>
+                        <th>Description</th>
+                        <th>Total Items</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Daily report items will be added here dynamically -->
+                </tbody>
+            </table>
+            
+        </section>
+    </div>
+    <script src="script.js">
+        
+    </script>
+    
+</body>
+</html>

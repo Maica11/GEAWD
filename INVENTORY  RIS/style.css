@@ -1,0 +1,238 @@
+       /* General Styles */
+       body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: white;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        background: lightblue;
+        border-radius: 8px;
+        box-shadow: 0 6px 10px green;
+        margin-top: 20px;
+    }
+
+    .container img {
+    width: 100px;
+    height: auto;
+    }
+
+    h1, h2 {
+        color: #333;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+          margin-bottom: 20px;
+    }
+
+    form input,
+    form textarea,
+    form select,
+    form button {
+        flex: 1 1 100%;
+    }
+
+    form input,
+    form textarea 
+    form select {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+
+    form select {
+        padding: 8px;
+        border: 1px solid #54a700;
+        border-radius: 5px;
+    }
+
+    form button {
+        padding: 10px;
+        border: none;
+        background-color: rgb(141, 141, 255);
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px 0;
+    }
+
+    form button:hover {
+        background-color: lightblue;
+    }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    thead {
+        background-color: #8eecff;
+    }
+
+    /* Responsive Table */
+    @media (max-width: 768px) {
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        th, td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        td {
+            position: relative;
+            padding-left: 50%;
+        }
+
+        td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 0;
+            width: 45%;
+            padding: 10px;
+            font-weight: bold;
+            background: #f4f4f4;
+            border-right: 1px solid #ddd;
+        }
+/* Editable Row Styles */
+.edit-mode input {
+width: 100%;
+box-sizing: border-box;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.edit-mode {
+background-color: #f9f9f9;
+}
+
+/* Hide Edit and Save Buttons in Table when not in Edit Mode */
+.action-buttons .edit,
+.action-buttons .save {
+display: HIDE;
+}
+
+.edit-mode .action-buttons .edit {
+display: none;
+}
+
+.edit-mode .action-buttons .save {
+display: inline-block;
+}
+
+
+    }
+
+
+    /* Action Buttons */
+    .action-buttons {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        
+    }
+
+    .action-buttons button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.875em;
+    }
+
+    .action-buttons .edit {
+        background-color: #28a745;
+        color: white;
+    }
+
+    .action-buttons .edit:hover {
+        background-color: #218838;
+    }
+
+    .action-buttons .delete {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .action-buttons .delete:hover {
+        background-color: #c82333;
+    }
+
+    .action-buttons .save {
+        background-color: #54ddff;
+        color: white;
+    }
+
+    .action-buttons .save:hover {
+        background-color: #54ddff;
+        color: white;
+    }
+
+    /* Responsive Button Group */
+    .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .button-group button {
+        flex: 1 1 auto;
+    }
+
+    /* Response Message */
+    .response-message {
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .response-message.success {
+        background-color: skyblue;
+        color: black;
+    }
+
+    .response-message.error {
+        background-color: skyblue;
+        color: black;
+    }
+
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
